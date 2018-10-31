@@ -2,14 +2,25 @@
 
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
+    <!-- <img src="./assets/logo.png"> -->
     <router-view/>
+    <!--3.讲组件写入页面-->
+    <BottomNav></BottomNav>
   </div>
 </template>
 
 <script>
+// 1.导入组件
+import BottomNav from './components/BottomNav.vue'
+
 export default {
-  name: 'App'
+  name: 'App',
+  
+  // 2.注册组件
+  components: {
+  	BottomNav
+  }
+  
 }
 </script>
 
