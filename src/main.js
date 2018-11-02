@@ -13,8 +13,6 @@ Vue.config.productionTip = false
 // 添加全局变量
 Vue.prototype.global = global;
 
-
-
 var vm = new Vue({
   el: '#app',
   router,

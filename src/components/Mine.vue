@@ -74,6 +74,7 @@
 			},	
 
 			getSid2: function() {
+				console.log(global.cookie)
 				this.$http.get(this.global.hostname + "/hotel/base/sid").then(function(res){
 					document.write(JSON.stringify(res.body));  	
 				},function() {
