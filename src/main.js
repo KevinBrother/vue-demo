@@ -3,7 +3,8 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import resource from './resource'
+// import resource from './resource'
+import axios from 'axios'
 import global from './utils/global'
 
 Vue.config.productionTip = false
@@ -12,11 +13,12 @@ Vue.config.productionTip = false
 
 // 添加全局变量
 Vue.prototype.global = global;
+Vue.prototype.$axios = axios;
 
 var vm = new Vue({
   el: '#app',
   router,
-  resource, //通过import引入，然后在这里调用
+  // resource, //通过import引入，然后在这里调用
   components: { App },
   template: '<App/>'
 })

@@ -32,6 +32,7 @@
 		<label>ajax	
 			<button v-on:click="getSid1">ajax1</button>	
 			<button v-on:click="getSid2">ajax2</button>	
+			<button v-on:click="getSid3">ajax3 axios</button>	
 		</label>
 
 
@@ -79,6 +80,18 @@
 					document.write(JSON.stringify(res.body));  	
 				},function() {
 					console.log("请求处理失败！");
+				})
+			},	
+
+			getSid3: function() {
+				this.$axios.get(this.global.hostname + "/hotel/base/sid")
+				//axios.get(this.global.hostname + "/hotel/base/sid")
+				.then(function(res){
+					console.log(res)
+					document.write(JSON.stringify(res.data));  	
+				})
+				.catch(function(err) {
+					console.log(err);	
 				})
 			}	
 		}
